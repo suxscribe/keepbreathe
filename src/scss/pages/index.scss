@@ -1,0 +1,94 @@
+.index {
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.blocks {
+  position: relative;
+  // overflow: hidden;
+  width: 100vw;
+
+  &__wrap {
+    position: relative;
+    display: flex;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+
+    & > * {
+      /* position: absolute; */
+      height: 200px;
+      /* border: 1px solid #ccc; */
+    }
+  }
+
+  &__ball {
+    $ball-size: 20px;
+
+    position: absolute;
+    left: $ball-size / -2;
+    bottom: 0px;
+    transform: translateY(10px);
+    width: $ball-size;
+    height: $ball-size;
+    border-radius: 50%;
+    background-color: #ff3300;
+    z-index: 2;
+  }
+}
+
+.inhale {
+  background-color: rgba(30, 154, 236, 0.1);
+  // background-image: url(/assets/inhale.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+
+  & svg path {
+    stroke: #3fa9f5;
+  }
+}
+.hold1 {
+  background-color: #eee;
+
+  & svg path {
+    stroke: #3fa9f5;
+  }
+}
+.hold2 {
+  background-color: #eee;
+
+  & svg path {
+    stroke: #3fa9f5;
+  }
+}
+.exhale {
+  background-color: rgba(243, 185, 138, 0.1);
+  // background-image: url(/assets/exhale.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  & svg path {
+    stroke: #ff931e;
+  }
+}
+
+.breath {
+  & svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+
+    & path,
+    & line {
+      stroke-width: 4px;
+      fill: none;
+    }
+  }
+}
